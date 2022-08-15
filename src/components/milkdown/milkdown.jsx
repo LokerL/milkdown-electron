@@ -10,7 +10,7 @@ import { nord } from "@milkdown/theme-nord";
 import { VueEditor, useEditor } from "@milkdown/vue";
 import { gfm } from "@milkdown/preset-gfm";
 import { emoji } from "@milkdown/plugin-emoji";
-import { menu } from "@milkdown/plugin-menu";
+// import { menu } from "@milkdown/plugin-menu";
 import { tooltipPlugin, tooltip } from "@milkdown/plugin-tooltip";
 import { listener, listenerCtx } from "@milkdown/plugin-listener";
 import {
@@ -37,7 +37,7 @@ export default defineComponent(() => {
         })
       )
       .use(emoji)
-      .use(menu)
+      // .use(menu)
       .use(gfm)
       .use(
         tooltip.configure(tooltipPlugin, {

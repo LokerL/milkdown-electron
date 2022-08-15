@@ -1,9 +1,18 @@
 <template>
-  <VueEditor />
+  <div class="app">
+    <Header />
+    <div class="container">
+      <div class="aside"></div>
+      <div class="editor-area">
+        <VueEditor />
+      </div>
+    </div>
+  </div>
 </template>
 
 <script setup>
 import VueEditor from "./components/milkdown/milkdown";
+import Header from "./components/Header.vue";
 </script>
 
 <style>
@@ -15,19 +24,44 @@ import VueEditor from "./components/milkdown/milkdown";
 }
 
 :root {
-  --milkdown-menu-height: 40px;
+  --milkdown-menu-height: 30px;
+  --milkdown-border-radius: 10px;
+  --milkdown-menu-margin-bottom: 1px;
 }
 body {
+  background-color: #fff0;
+}
+.app {
+  background-color: #fff;
+  border-radius: var(--milkdown-border-radius);
+  height: calc(100vh - 20px);
+}
+.app .container {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  width: calc(100vw - 18px);
+  height: calc(100vh - 16px - var(--milkdown-menu-height) - 10px);
+}
+
+.app .container::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+  background-color: #b5b1b1;
+  cursor: pointer;
+}
+.app .container::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px #fff;
+  border-radius: 10px;
   background-color: #fff;
 }
-.milkdown {
-  height: calc(100vh - 16px - 56px);
-}
-.milkdown-menu {
-  height: var(--milkdown-menu-height);
-  display: flex !important;
-  align-items: center;
+.app .container::-webkit-scrollbar-thumb {
+  cursor: pointer;
   border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.32);
+  background-color: #ececec;
 }
 
 .material-icons {

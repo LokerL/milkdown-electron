@@ -1,0 +1,42 @@
+.milkdown {
+  width: 70vw;
+  max-width: 800px;
+  box-shadow: none !important;
+}
+
+.milkdown .editor {
+  padding: 10px 20px !important;
+}
+
+.milkdown .editor h1 {
+  font-size: 2.25em !important;
+  border-bottom: 1px solid #eee !important;
+  font-weight: 900;
+}
+.milkdown .editor h2 {
+  font-size: 1.75em !important;
+  border-bottom: 1px solid #eee !important;
+  font-weight: 800;
+}
+.milkdown .editor h3 {
+  font-size: 1.5em !important;
+  font-weight: 700;
+}
+.milkdown .editor h4 {
+  font-size: 1.25em !important;
+}
+.milkdown .editor h5 {
+  font-size: 1em !important;
+}
+.milkdown .editor h6 {
+  font-size: 1em !important;
+  color: #777;
+}
+
+.milkdown .editor p {
+  letter-spacing: 0.1px !important;
+}
+
+.milkdown .editor > * {
+  margin: 5px 0 !important;
+}
