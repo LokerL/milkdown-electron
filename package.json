@@ -30,5 +30,17 @@
     "vite",
     "vue3",
     "vue"
-  ]
+  ],
+  "dependencies": {
+    "@milkdown/core": "^6.3.2",
+    "@milkdown/plugin-emoji": "^6.3.2",
+    "@milkdown/plugin-listener": "^6.3.2",
+    "@milkdown/plugin-menu": "^6.3.2",
+    "@milkdown/plugin-slash": "^6.3.2",
+    "@milkdown/plugin-tooltip": "^6.3.2",
+    "@milkdown/preset-gfm": "^6.3.2",
+    "@milkdown/theme-nord": "^6.3.2",
+    "@milkdown/vue": "^6.3.2",
+    "@vitejs/plugin-vue-jsx": "^2.0.0"
+  }
 }

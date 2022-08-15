@@ -35,7 +35,11 @@ const indexHtml = join(ROOT_PATH.dist, "index.html");
 async function createWindow() {
   win = new BrowserWindow({
     title: "Main window",
+    width: 1020,
+    height: 600,
     icon: join(ROOT_PATH.public, "favicon.ico"),
+    frame: false,
+    transparent: true,
     webPreferences: {
       preload,
       // Warning: Enable nodeIntegration and disable contextIsolation is not secure in production
