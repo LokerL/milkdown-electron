@@ -6,7 +6,7 @@ import {
   ThemeIcon,
   themeManagerCtx,
 } from "@milkdown/core";
-import { nord } from "@milkdown/theme-nord";
+import { nord, nordDark, nordLight } from "@milkdown/theme-nord";
 import { VueEditor, useEditor } from "@milkdown/vue";
 import { gfm } from "@milkdown/preset-gfm";
 import { emoji } from "@milkdown/plugin-emoji";
@@ -29,7 +29,7 @@ export default defineComponent(() => {
         ctx.set(defaultValueCtx, "# Milkdown 💖 Vue");
       })
       .use(
-        nord.override((emotion, manager) => {
+        nordLight.override((emotion, manager) => {
           manager.set(ThemeIcon, (icon) => {
             if (!icon) return;
             return getIcon(icon);

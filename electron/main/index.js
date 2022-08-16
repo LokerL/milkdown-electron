@@ -1,6 +1,7 @@
-import { app, BrowserWindow, shell, ipcMain } from "electron";
+import { app, BrowserWindow, shell, ipcMain, screen } from "electron";
 import { release } from "os";
 import { join } from "path";
+import { getCurrentInstance } from "vue";
 
 // Disable GPU Acceleration for Windows 7
 if (release().startsWith("6.1")) app.disableHardwareAcceleration();
@@ -108,4 +109,41 @@ ipcMain.handle("open-win", (event, arg) => {
     childWindow.loadURL(`${url}/#${arg}`);
     // childWindow.webContents.openDevTools({ mode: "undocked", activate: true })
   }
+});
+
+// 退出程序
+ipcMain.on("window-close", function () {
+  app.quit();
+});
+// 最小化
+ipcMain.on("window-minimize", function () {
+  win.minimize();
+});
+// 全屏
+ipcMain.on("window-maximize", function () {
+  if (win.isFullScreen()) {
+    win.setFullScreen(false);
+  } else if (win.isMaximized()) {
+    win.unmaximize();
+  } else {
+    win.maximize();
+  }
+  // win.setFullScreen(true);
+});
+// 退出全屏
+ipcMain.on("window-unmaximize", function () {
+  win.setFullScreen(false);
+});
+
+// 移动窗口----start
+ipcMain.on("win-start", (event) => {
+  const winPosition = win.getPosition();
+  const cursorPosition = screen.getCursorScreenPoint();
+  let x = cursorPosition.x - winPosition[0];
+  let y = cursorPosition.y - winPosition[1];
+  event.returnValue = JSON.stringify({ x, y });
+});
+ipcMain.on("win-move", (_, params) => {
+  const param = JSON.parse(params);
+  win.setPosition(param.x, param.y, true);
 });

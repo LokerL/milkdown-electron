@@ -16,25 +16,10 @@ import Header from "./components/Header.vue";
 </script>
 
 <style>
-@font-face {
-  font-family: "Material Icons";
-  font-style: normal;
-  font-weight: 400;
-  src: url(./assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2");
-}
-
-:root {
-  --milkdown-menu-height: 30px;
-  --milkdown-border-radius: 10px;
-  --milkdown-menu-margin-bottom: 1px;
-}
-body {
-  background-color: #fff0;
-}
 .app {
   background-color: #fff;
   border-radius: var(--milkdown-border-radius);
-  height: calc(100vh - 20px);
+  height: 100vh;
 }
 .app .container {
   display: flex;

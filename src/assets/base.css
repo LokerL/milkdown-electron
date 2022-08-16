@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../assets/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format("woff2");
+}
+
+:root {
+  --milkdown-menu-height: 30px;
+  --milkdown-border-radius: 5px;
+  --milkdown-menu-margin-bottom: 1px;
+}
+
+body {
+  background-color: #fff0;
+  margin: 0;
+  padding: 0;
+}
+
 h1,
 h2,
 h3,
