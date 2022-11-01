@@ -33,7 +33,7 @@
   ],
   "dependencies": {
     "@milkdown/core": "^6.3.2",
-    "@milkdown/plugin-emoji": "^6.3.2",
+    "@milkdown/plugin-emoji": "^6.5.0",
     "@milkdown/plugin-listener": "^6.3.2",
     "@milkdown/plugin-menu": "^6.3.2",
     "@milkdown/plugin-slash": "^6.3.2",
